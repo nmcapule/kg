@@ -2,8 +2,18 @@
 <html class="no-js" lang="en-US">
 {{ partial "head.html" . }}
 <body lang="en">
+<div class="site-wrapper">
 {{ partial "header.html" . }}
-Hello world s
+<hr/>
+<section id="main" class="content-wrapper">
+    <ul id="content-list">
+        {{ range .Data.Pages }}
+            {{ .Render "summary" }}
+        {{ end }}
+    </ul>
+</section>
+<hr/>
 {{ partial "footer.html" . }}
+</div>
 </body>
 </html>
