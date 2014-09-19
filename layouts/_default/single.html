@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US">
+{{ partial "head.html" . }}
+<body lang="en">
+<div class="site-wrapper">
+{{ partial "header.html" . }}
+<hr/>
+<section id="main" class="content-wrapper">
+    <article id="content">
+    {{ .Content }}
+    </article>
+</section>
+<hr/>
+{{ partial "footer.html" . }}
+</div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<div id="home-menu" class="pure-menu pure-menu-open pure-menu-horizontal">
+    <a href="#" class="pure-menu-heading">WEDDING KIMI GO</a>
+    <a class="nav-button-burger" id="nav-button">
+        <i class="fa fa-navicon fa"></i>
+    </a>
+    {{ partial "navitems.html" . }}
+</div>
+<script type="text/javascript">
+    $('.nav-button-burger').click(function () {
+        $('#home-menu ul').toggle();
+    });
+
+    if ($('.nav-button-burger').css('visibility') == 'visible')
+        $('#home-menu ul').hide();
+
+    $(window).resize(function () {
+        $('#home-menu ul').show();
+        if ($('.nav-button-burger').css('visibility') == 'visible')
+            $('#home-menu ul').hide();
+    });
+
+    $(window).scroll(function() {
+        var top = window.pageXOffset ? window.pageXOffset : 
+        document.documentElement.scrollTop ? 
+        document.documentElement.scrollTop : document.body.scrollTop;
+        
+        if (top > 300) {
+            $('#home-menu').addClass('pure-menu-fixed');
+        } else {
+            $('#home-menu').removeClass('pure-menu-fixed');
+        }
+    });
+</script>
