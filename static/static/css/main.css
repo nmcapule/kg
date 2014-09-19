@@ -44,8 +44,12 @@ hr {
     height: 100%;
     font-family: "Great Vibes", serif;
     font-size: 60px;
-    text-align: right;
+    text-align: center;
     text-shadow: 2px 2px 4px #eee;
+}
+
+.header-subtitle {
+    font-size: 20px;
 }
 
 .footer {
