@@ -1,6 +1,7 @@
-baseurl = "http://nmcapule.github.io/kg""
+baseurl = "http://nmcapule.github.io/kg"
 contentdir = "content"
 layoutdir = "layouts"
 publishdir = "public"
 languageCode = "en-us"
 title = "Wedding Kimi Go"
+
