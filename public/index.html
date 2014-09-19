@@ -77,16 +77,38 @@
     });
 </script>
 
-<div class="home-content">
+<div class="home-content stackthree"></div>
+<div class="home-content stacktwo"></div>
+<div class="home-content stackone">
     <div class="home-content-inner">
         <span class="social">
+            <a href="http://www.facebook.com">
             <img src="http://nmcapule.github.io/kg/media/icons/colour/facebook.png">
+            </a>
+            <a href="http://plus.google.com">
             <img src="http://nmcapule.github.io/kg/media/icons/colour/google+.png">
+            </a>
         </span>
         <div class="home-content-title">
             Kimi Go One Stop Wedding Shop
         </div>
     </div>
+    <script type="text/javascript">
+        var urls = [
+            'http:\/\/nmcapule.github.io\/kg/media/images/client/422965_2705438364178_1503331112_31970141_1410852333_n.jpg',
+            'http:\/\/nmcapule.github.io\/kg/media/images/client/1300_601189413249237_438972988_n.jpg',
+            'http:\/\/nmcapule.github.io\/kg/media/images/client/10649995_10204779311588194_4915399931834923744_n.jpg'
+        ];
+        var i = 0;
+        setInterval(function () {
+            $('.home-content.stackone')
+            .animate({height: 0}, 'fast', function() {
+                $(this)
+                    .css({'background-image': 'url(' + urls[++i % urls.length] + ')'})
+                    .animate({height: 500});
+            });
+        }, 8000);
+    </script>
 </div>
 </body>
 </html>

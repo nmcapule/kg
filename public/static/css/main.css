@@ -132,6 +132,12 @@ p {
     background-repeat: no-repeat;
     background-position: center center;
     z-index: -9999;
+
+    /* photo effect */
+    border: 6px solid #fff;
+    -webkit-box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    -moz-box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
 }
 
 .home-content-inner {
@@ -169,6 +175,36 @@ p {
 
 .post-summary {
     margin-top: 1em;
+}
+
+/*STACK ONE*/
+.stackone {
+}
+                 
+    /*STACK TWO*/
+.stacktwo {
+    top: 5px;
+    left: -5px;
+    background-image: none;
+    background-color: silver;
+    -webkit-transform: rotate(-5deg);
+    -moz-transform: rotate(-5deg);
+    -o-transform: rotate(-5deg);
+    -ms-transform: rotate(-5deg);
+    transform: rotate(-5deg);
+}
+   
+/*STACK THREE*/
+.stackthree {
+    top: 10px;
+    left: -5px;
+    background-image: none;
+    background-color: silver;
+    -webkit-transform: rotate(-10deg);
+    -moz-transform: rotate(-10deg);
+    -o-transform: rotate(-10deg);
+    -ms-transform: rotate(-10deg);
+    transform: rotate(-10deg);
 }
 
 @media (min-width: 40em) {
