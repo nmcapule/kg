@@ -21,7 +21,7 @@ hr {
 }
 
 .x-background-image {
-    background-image: url("/media/images/background.jpg");
+    background-image: url("../../media/images/background.jpg");
 }
 
 .transparent {
