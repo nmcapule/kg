@@ -2,7 +2,7 @@
 date = "2014-09-18T20:53:21+08:00"
 description = ""
 tags = ["wedding", "kimigo"]
-title = "about"
+title = "About Us"
 topics = ["Wedding", "Kimi GO"]
 
 +++

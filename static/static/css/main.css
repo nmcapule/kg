@@ -4,12 +4,14 @@
 
 html {
     overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 body {
     font-family: "Josefin Sans", serif;
     font-size: 16px;
     background-color: #fee;
+    background-image: url("../../media/images/bg-tile3.jpg");
 }
 
 h1,
@@ -20,6 +22,7 @@ h2 {
 hr {
     border: 0;
     height: 1px;
+    margin: 0;
     background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
     background-image: -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
     background-image: -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
@@ -51,6 +54,7 @@ p {
 }
 
 .header-content {
+    padding-top: 100px;
     height: 100%;
     font-family: "Great Vibes", serif;
     font-size: 60px;
@@ -81,6 +85,7 @@ p {
 .footer-copyright {
     font-size: 12px;
     text-align: center;
+    padding: 10px;
 }
 
 .header {
@@ -181,7 +186,7 @@ p {
 .stackone {
 }
                  
-    /*STACK TWO*/
+/*STACK TWO*/
 .stacktwo {
     top: 5px;
     left: -5px;
@@ -206,6 +211,34 @@ p {
     -ms-transform: rotate(-10deg);
     transform: rotate(-10deg);
 }
+
+.gmap-embed {
+    position: relative;
+    padding-bottom: 75%;
+    height: 0;
+    overflow: hidden;
+
+    text-align: center;
+    left: auto;
+    right: auto;
+    border: 6px solid #fff;
+    -webkit-box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    -moz-box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+
+.gmap-embed iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.pure-group {
+    max-width: 300px;
+}
+
 
 @media (min-width: 40em) {
     .nav-button-burger {

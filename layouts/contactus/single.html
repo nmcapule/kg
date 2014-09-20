@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US">
+{{ partial "head.html" . }}
+<body lang="en">
+<div class="site-wrapper">
+{{ partial "header.html" . }}
+<hr/>
+<div class="content-header">
+    <h1 class="content-title">{{ .Title }}</h1>
+</div>
+<section id="main" class="content-wrapper">
+    <article id="content">
+    <div><h2><i class="fa fa-map-marker fa-fw"></i> Location</h3>
+        <p> Unit 1, Royalle Parthenon Square, Tandang Sora QC
+    </div>
+    <div><h2><i class="fa fa-phone fa-fw"></i> Telephone</h3>
+        <p> 794-1122/ 525-6465/ 343-2765
+    </div>
+    <div><h2><i class="fa fa-phone fa-fw"></i> Cellphone</h3>
+        <p> 0917-866-0406
+        <p> 0919-999-9546
+    </div>
+    <div><h2><i class="fa fa-envelope-o fa-fw"></i> E-mail</h3>
+        <p> weddingkimigo@yahoo.com
+        <p> kimigo_gallery@yahoo.com.ph
+    </div>
+    <div><h2><i class="fa fa-facebook fa-fw"></i> Facebook</h3>
+        <p> weddingkimigo@yahoo.com
+    </div>
+    <div class="gmap-embed">
+        <iframe frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=Kimigo&key=AIzaSyBxZO3lZuEPeLsYpUus0EXROcpFAl8rBwU"></iframe>
+    </div>
+    <div class="mandrill-mail">
+        <form id="mail" class="pure-form pure-form-stacked">
+            <legend><h1>Feel free to message us</h1></legend>
+            <fieldset class="pure-group">
+                <input id="mail-name" type="text" class="pure-input-1" placeholder="Name" required>
+                <input id="mail-email" type="email" class="pure-input-1" placeholder="Email Address" required>
+                <input id="mail-number" type="text" class="pure-input-1" placeholder="Contact Number (optional)">
+            </fieldset>
+            <textarea id="mail-message" class="pure-input-1" placeholder="Your message" required></textarea>
+            <button id="mail-submit" type="submit" class="pure-button pure-input-1 pure-button-primary">Send</button>
+        </form>
+        <script type="text/javascript">
+            // warning: this is prone to abuse
+            // mod if there is a server side
+            $('#mail').submit(function (event) {
+                var name = $('#mail-name').val();
+                var email = $('#mail-email').val();
+                var contact = $('#mail-number').val();
+                var message = $('#mail-message').val();
+
+                // obfuscate for crawlers
+                var q2 = 'capule';
+                var qq = 'gmail';
+                var q1 = 'nm';
+                var from = 'weddingkimigo@weddingkimigo.com'
+                var dest = q1 + q2 + '@' + qq + '.' + 'com';
+
+                data = {
+                    'key': '34hKRr51JJ4bf-j9nI4rlA',
+                    'message': {
+                        'from_email': from,
+                        'to': [ {
+                            'email': dest,
+                            'name': '',
+                            'type': 'to'
+                        } ],
+                        'autotext': 'true',
+                        'subject': '[WEDDING KIMI GO] from ' + name,
+                        'html': '(' + email + ':' + contact + ') ' + message
+                    }
+                };
+
+                $('#mail :input').prop('disabled', true);
+                $.ajax({
+                    type: "POST",
+                    url: "https://mandrillapp.com/api/1.0/messages/send.json",
+                    data: data
+                }).done(function (response) {
+                    $('#mail :input').prop('disabled', false);
+                    alert('Message sent!');
+                });
+
+                event.preventDefault();
+            });
+        </script>
+    </div>
+    </article>
+</section>
+<hr/>
+{{ partial "footer.html" . }}
+</div>
+</body>
+</html>

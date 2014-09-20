@@ -5,6 +5,9 @@
 <div class="site-wrapper">
 {{ partial "header.html" . }}
 <hr/>
+<div class="content-header">
+    <h1 class="content-title">{{ .Title }}</h1>
+</div>
 <section id="main" class="content-wrapper">
     <article id="content">
     {{ .Content }}
